@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shop_app/core/services/shared_storage/shared_storage.dart';
 
-import 'app.dart';
+import 'app/app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

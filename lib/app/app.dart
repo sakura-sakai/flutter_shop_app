@@ -7,7 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shop_app/presentation/route/router.dart';
 import 'package:shop_app/presentation/theme/theme.dart';
 
-import 'core/utils/utils.dart';
+import 'app_responsive.dart';
 
 class App extends HookConsumerWidget {
   const App({Key? key}) : super(key: key);

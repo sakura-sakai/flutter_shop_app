@@ -10,8 +10,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 part 'extensions/list.dart';
 
-part 'responsive/app_responsive.dart';
-
 part 'responsive/responsive.dart';
 
 part 'semaphore.dart';

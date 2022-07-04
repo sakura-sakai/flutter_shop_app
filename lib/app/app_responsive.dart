@@ -1,4 +1,7 @@
-part of utils;
+import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+
+import '../core/utils/utils.dart';
 
 class AppResponsive extends HookWidget {
   const AppResponsive({
