@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:shop_app/core/utils/utils.dart';
 import 'package:shop_app/presentation/widgets/widgets.dart';
 
 import '../../../l10n/l10n_manager.dart';
 import 'splash_view_model.dart';
 
-class SplashPage extends HookConsumerWidget {
+class SplashPage extends HookWidget {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(splashVMProvider);
+  Widget build(BuildContext context) {
+    context.read(splashVMProvider);
 
     return Scaffold(
       backgroundColor: Colors.white,

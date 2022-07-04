@@ -52,7 +52,7 @@ class PageSlider extends HookWidget {
               maxLines: 4,
             ),
           ),
-          Container()
+          const SizedBox.shrink(),
         ],
       ),
     );

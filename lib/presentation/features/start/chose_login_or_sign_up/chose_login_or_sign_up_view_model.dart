@@ -3,13 +3,13 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shop_app/core/view_model/view_model.dart';
 
-final choseLoginOrSignUpCtrlProvider =
-    ChangeNotifierProvider.autoDispose<ChoseLoginOrSignUpController>((ref) {
-  return ChoseLoginOrSignUpController(ref.read);
+final choseLoginOrSignUpVMProvider =
+    ChangeNotifierProvider.autoDispose<ChoseLoginOrSignUpViewModel>((ref) {
+  return ChoseLoginOrSignUpViewModel(ref.read);
 });
 
-class ChoseLoginOrSignUpController extends ViewModel {
-  ChoseLoginOrSignUpController(Reader read) : super(read);
+class ChoseLoginOrSignUpViewModel extends ViewModel {
+  ChoseLoginOrSignUpViewModel(Reader read) : super(read);
 
   bool isPlayAnimationNextPage = false;
 

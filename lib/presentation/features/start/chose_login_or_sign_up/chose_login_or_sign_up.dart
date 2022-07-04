@@ -8,23 +8,14 @@ import '../../../l10n/l10n_manager.dart';
 import '../../../theme/theme.dart';
 import 'chose_login_or_sign_up_view_model.dart';
 
-class ChoseLoginOrSignUpPage extends HookConsumerWidget {
-  ChoseLoginOrSignUpPage({Key? key}) : super(key: key);
-
-  final animationController = useAnimationController(
-    duration: const Duration(milliseconds: 300),
-  );
+class ChoseLoginOrSignUpPage extends HookWidget {
+  const ChoseLoginOrSignUpPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final readCtrl = ref.read(choseLoginOrSignUpCtrlProvider);
-    final isPlayAnimationNextPage = ref.watch(
-      choseLoginOrSignUpCtrlProvider.select(
-        (ctrl) => ctrl.isPlayAnimationNextPage,
-      ),
-    );
+  Widget build(BuildContext context) {
+    final readVM = context.read(choseLoginOrSignUpVMProvider);
 
-    // readCtrl.onInit();
+    // readVM.onInit();
 
     return _BackgroundPage(
       children: [
@@ -42,31 +33,38 @@ class ChoseLoginOrSignUpPage extends HookConsumerWidget {
           fontColor: Colors.white,
           fontWeight: FontWeight.w200,
         ),
-        if (!isPlayAnimationNextPage)
-          SizedBox(
-            width: 70.w,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Button(
-                  useL10n().login.toUpperCase(),
-                  buttonSize: ButtonSize.infinityWith,
-                  onPressed: readCtrl.playAnimation,
-                ),
-                SizedBox(height: 2.h),
-                Button(
-                  useL10n().signUp.toUpperCase(),
-                  buttonType: ButtonType.primaryLight,
-                  buttonSize: ButtonSize.infinityWith,
-                  onPressed: readCtrl.playAnimation,
-                ),
-              ],
-            ),
-          )
-        else
-          AnimationNextPage(
-            controller: readCtrl.animationController,
-          ),
+        HookConsumer(
+          builder: (context, ref, child) {
+            final isPlayAnimationNextPage = ref.watch(
+              choseLoginOrSignUpVMProvider.select(
+                (vm) => vm.isPlayAnimationNextPage,
+              ),
+            );
+
+            return !isPlayAnimationNextPage
+                ? SizedBox(
+                    width: 70.w,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Button(
+                          useL10n().login.toUpperCase(),
+                          buttonSize: ButtonSize.infinityWith,
+                          onPressed: readVM.playAnimation,
+                        ),
+                        SizedBox(height: 2.h),
+                        Button(
+                          useL10n().signUp.toUpperCase(),
+                          buttonType: ButtonType.primaryLight,
+                          buttonSize: ButtonSize.infinityWith,
+                          onPressed: readVM.playAnimation,
+                        ),
+                      ],
+                    ),
+                  )
+                : AnimationNextPage(controller: readVM.animationController);
+          },
+        ),
       ],
     );
   }
@@ -130,7 +128,7 @@ class _BackgroundPage extends HookWidget {
   }
 }
 
-class AnimationNextPage extends HookConsumerWidget {
+class AnimationNextPage extends HookWidget {
   AnimationNextPage({
     Key? key,
     required this.controller,
@@ -146,7 +144,7 @@ class AnimationNextPage extends HookConsumerWidget {
   final Animation _animation;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     controller.addListener(() {
       if (_animation.isCompleted) {
         print('------------------> Push Login Page');

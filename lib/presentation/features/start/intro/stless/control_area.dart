@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:shop_app/core/utils/utils.dart';
 import 'package:shop_app/presentation/widgets/widgets.dart';
 
 import '../intro_view_model.dart';
 import 'page_indicator.dart';
 
-class ControlArea extends HookConsumerWidget {
+class ControlArea extends HookWidget {
   const ControlArea({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final readVM = ref.read(introVMProvider);
-    final currentPage = ref.watch(
-      introVMProvider.select((ctrl) => ctrl.currentPage),
-    );
+  Widget build(BuildContext context) {
+    final readVM = context.read(introVMProvider);
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -24,7 +23,7 @@ class ControlArea extends HookConsumerWidget {
           child: Opacity(
             opacity: _isLastPage(readVM) ? 0 : 1,
             child: TextButton(
-              onPressed: () => ref.read(introVMProvider).goToLoginPage(),
+              onPressed: readVM.goToLoginPage,
               child: const TextView(
                 'Skip',
                 fontFamily: FontFamily.gotik,
@@ -33,14 +32,20 @@ class ControlArea extends HookConsumerWidget {
             ),
           ),
         ),
-        PageIndicator(
-          currentPage: currentPage,
-          indicatorLength: readVM.pageSliders.length,
+        HookConsumer(
+          builder: (context, ref, child) {
+            return PageIndicator(
+              currentPage: ref.watch(
+                introVMProvider.select((ctrl) => ctrl.currentPage),
+              ),
+              indicatorLength: readVM.pageSliders.length,
+            );
+          },
         ),
         TextButton(
           onPressed: () {
             if (_isLastPage(readVM)) {
-              ref.read(introVMProvider).goToLoginPage();
+              readVM.goToLoginPage();
               return;
             }
 

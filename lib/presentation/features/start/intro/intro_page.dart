@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:shop_app/core/utils/utils.dart';
 import 'package:shop_app/presentation/theme/theme.dart';
 
 import 'intro_view_model.dart';
 import 'stless/control_area.dart';
 
-class IntroPage extends HookConsumerWidget {
+class IntroPage extends HookWidget {
   const IntroPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final readCtrl = ref.read(introVMProvider);
+  Widget build(BuildContext context) {
+    final readCtrl = context.read(introVMProvider);
 
     return Scaffold(
       backgroundColor: AppColors.white,
