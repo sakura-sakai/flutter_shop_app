@@ -1,7 +1,7 @@
 // import 'package:hooks_riverpod/hooks_riverpod.dart';
 //
 // import '../../../core/exceptions/exceptions.dart';
-// import '../../core/view_controller/view_model.dart';
+// import '../../core/view_controller/view_model_base.dart';
 // import '../../data/repositories/auth_repository.dart';
 // import '../../data/request_param/authentication_request_params.dart';
 // import '../../route/router.dart';

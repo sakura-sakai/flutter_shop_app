@@ -6,8 +6,8 @@ import 'package:shop_app/presentation/theme/theme.dart';
 import 'package:shop_app/presentation/widgets/widgets.dart';
 
 
-class PageSlider extends HookWidget {
-  const PageSlider({
+class SliderPage extends HookWidget {
+  const SliderPage({
     Key? key,
     required this.title,
     required this.imgPath,

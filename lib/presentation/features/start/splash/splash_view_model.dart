@@ -2,15 +2,15 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shop_app/presentation/route/router.dart';
 
 import '../../../../core/utils/utils.dart';
-import '../../../../core/view_model/view_model.dart';
+import '../../../../core/view_model/view_model_base.dart';
 import '../../../../domain/usecases/use_case.dart';
 
-final splashVMProvider = ChangeNotifierProvider.autoDispose<SplashController>(
-  (ref) => SplashController(ref.read),
+final splashVMProvider = ChangeNotifierProvider.autoDispose<SplashViewModel>(
+  (ref) => SplashViewModel(ref.read),
 );
 
-class SplashController extends ViewModel {
-  SplashController(Reader read)
+class SplashViewModel extends ViewModelBase {
+  SplashViewModel(Reader read)
       : _read = read,
         super(read);
 
@@ -20,11 +20,13 @@ class SplashController extends ViewModel {
 
   static Semaphore authApiSem = Semaphore(timeUp: 60);
 
+  @override
   void onInit() {
-    _init();
+    _startApp();
+    super.onInit();
   }
 
-  Future<void> _init() async {
+  Future<void> _startApp() async {
     if (authApiSem.acquire() == false) {
       return;
     }

@@ -11,19 +11,19 @@ class IntroPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final readCtrl = context.read(introVMProvider);
+    final readVM = context.read(introVMProvider);
 
     return Scaffold(
       backgroundColor: AppColors.white,
       body: Stack(
         children: <Widget>[
           NotificationListener<ScrollNotification>(
+            onNotification: readVM.onNotifyScroll,
             child: PageView(
-              children: readCtrl.pageSliders,
-              controller: readCtrl.pageController,
+              children: readVM.pageSliders,
+              controller: readVM.pageController,
               physics: const BouncingScrollPhysics(),
             ),
-            onNotification: readCtrl.onNotifyScroll,
           ),
           const Positioned(
             left: 0.0,

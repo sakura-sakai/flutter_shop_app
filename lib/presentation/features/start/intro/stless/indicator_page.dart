@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:shop_app/presentation/theme/theme.dart';
 
-class PageIndicator extends HookWidget {
-   const PageIndicator({
+class IndicatorPage extends HookWidget {
+   const IndicatorPage({
     Key? key,
     this.color = AppColors.violetAccent,
     this.selectedColor = AppColors.violet,
@@ -36,7 +36,7 @@ class PageIndicator extends HookWidget {
         child: CustomPaint(
           size: Size.fromHeight(indicatorSize),
           child: Container(height: indicatorSize),
-          painter: CirclePainter(
+          painter: _CirclePainter(
             color: color,
             selectedColor: selectedColor,
             count: indicatorLength,
@@ -50,7 +50,7 @@ class PageIndicator extends HookWidget {
   }
 }
 
-class CirclePainter extends CustomPainter {
+class _CirclePainter extends CustomPainter {
   double currentPage;
   int count;
   Color color;
@@ -61,7 +61,7 @@ class CirclePainter extends CustomPainter {
   late Paint _circlePaint;
   late Paint _selectedPaint;
 
-  CirclePainter({
+  _CirclePainter({
     this.currentPage = 0.0,
     this.count = 0,
     this.color = Colors.white,

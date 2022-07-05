@@ -11,7 +11,7 @@ class SplashPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read(splashVMProvider);
+    context.read(splashVMProvider).onInit();
 
     return Scaffold(
       backgroundColor: Colors.white,
