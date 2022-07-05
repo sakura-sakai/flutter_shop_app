@@ -22,14 +22,14 @@
 //       children: <Widget>[
 //         TextView(
 //           isLogin
-//               ? useL10n().doNotHaveAnAccount
-//               : useL10n().alreadyHaveAnAccount,
+//               ? L10n.current.doNotHaveAnAccount
+//               : L10n.current.alreadyHaveAnAccount,
 //           fontColor: AppColors.violet,
 //         ),
 //         GestureDetector(
 //           onTap: onTap,
 //           child: TextView(
-//             isLogin ? useL10n().signUp : useL10n().signIn,
+//             isLogin ? L10n.current.signUp : L10n.current.signIn,
 //             fontWeight: FontWeight.bold,
 //             fontColor: AppColors.violet,
 //           ),

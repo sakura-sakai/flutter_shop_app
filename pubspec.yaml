@@ -76,11 +76,6 @@ dev_dependencies:
   mocktail: any
   mocktail_image_network: any
 
-flutter_gen:
-  output: lib/presentation/widgets/stless/assets_gen/
-  integrations:
-    flutter_svg: true
-
 flutter:
   generate: true
   uses-material-design: true
@@ -124,3 +119,15 @@ flutter:
           weight: 400
         - asset: assets/fonts/GOTHICB.TTF
           weight: 600
+
+flutter_gen:
+  output: lib/presentation/widgets/stless/assets_gen/
+  integrations:
+    flutter_svg: true
+
+flutter_intl:
+  enabled: true
+  class_name: L10n
+  main_locale: en
+  arb_dir: lib/presentation/l10n/message
+  output_dir: lib/presentation/l10n

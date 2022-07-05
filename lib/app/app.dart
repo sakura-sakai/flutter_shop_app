@@ -2,11 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shop_app/presentation/route/router.dart';
 import 'package:shop_app/presentation/theme/theme.dart';
 
+import '../presentation/l10n/l10n.dart';
 import 'app_responsive.dart';
 
 class App extends HookConsumerWidget {
@@ -35,11 +36,13 @@ class App extends HookConsumerWidget {
             ),
 
             // Locale
-            localizationsDelegates: L10n.localizationsDelegates,
-            supportedLocales: L10n.supportedLocales,
-            locale: kDebugMode
-                ? DevicePreview.locale(context)
-                : null,
+            supportedLocales: L10n.delegate.supportedLocales,
+            localizationsDelegates: const [
+              L10n.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
 
             // DevicePreview
             builder: DevicePreview.appBuilder,

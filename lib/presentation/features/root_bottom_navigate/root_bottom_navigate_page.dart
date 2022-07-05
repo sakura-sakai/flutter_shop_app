@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-import '../../l10n/l10n_manager.dart';
+import '../../l10n/l10n.dart';
 import '../../route/router.dart';
 
 class RootBottomNavigatePage extends HookWidget {
@@ -30,19 +30,19 @@ class RootBottomNavigatePage extends HookWidget {
                 Icons.home,
                 size: 23.0,
               ),
-              label: useL10n().home,
+              label: L10n.current.home,
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.shop),
-              label: useL10n().brand,
+              label: L10n.current.brand,
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.shopping_cart),
-              label: useL10n().brand,
+              label: L10n.current.brand,
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.person),
-              label: useL10n().brand,
+              label: L10n.current.brand,
             ),
           ],
         );

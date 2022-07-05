@@ -1,4 +1,0 @@
-arb-dir: lib/presentation/l10n/message
-template-arb-file: en-US.arb
-output-localization-file: l10n.dart
-output-class: L10n

@@ -31,7 +31,7 @@
 //             children: <Widget>[
 //               SafeArea(child: SizedBox(height: 3.h)),
 //               TextView(
-//                 useL10n().signUp.toUpperCase(),
+//                 L10n.current.signUp.toUpperCase(),
 //                 fontSize: FontSize.massive,
 //                 fontFamily: FontFamily.rotunda,
 //                 fontWeight: FontWeight.bold,
@@ -47,8 +47,8 @@
 //                   children: [
 //                     TextArea(
 //                       onSaved: (value) {},
-//                       hintText: useL10n().email,
-//                       labelText: useL10n().email,
+//                       hintText: L10n.current.email,
+//                       labelText: L10n.current.email,
 //                       isRequired: true,
 //                       textLightColor: AppColors.violet,
 //                       textType: TextType.email,
@@ -71,8 +71,8 @@
 //                     SizedBox(height: 1.h),
 //                     ObscureTextArea(
 //                       onSaved: (value) {},
-//                       hintText: useL10n().password,
-//                       labelText: useL10n().password,
+//                       hintText: L10n.current.password,
+//                       labelText: L10n.current.password,
 //                       isRequired: true,
 //                       textLightColor: AppColors.violet,
 //                       textType: TextType.password,
@@ -94,7 +94,7 @@
 //                     ),
 //                     SizedBox(height: 3.h),
 //                     LoadingButton(
-//                       useL10n().signUp.toUpperCase(),
+//                       L10n.current.signUp.toUpperCase(),
 //                       buttonType: ButtonType.primaryLight,
 //                       buttonSize: ButtonSize.infinityWith,
 //                       onPressed: () async {
@@ -190,7 +190,7 @@
 //               horizontal: kDefaultExThinPadding,
 //             ),
 //             child: TextView(
-//               useL10n().or,
+//               L10n.current.or,
 //               fontWeight: FontWeight.w600,
 //               fontColor: AppColors.violet,
 //             ),

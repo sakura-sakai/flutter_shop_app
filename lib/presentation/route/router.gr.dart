@@ -26,10 +26,8 @@ class _$AppRouter extends RootStackRouter {
           routeData: routeData, child: const IntroPage());
     },
     ChoseLoginOrSignUpRoute.name: (routeData) {
-      final args = routeData.argsAs<ChoseLoginOrSignUpRouteArgs>(
-          orElse: () => const ChoseLoginOrSignUpRouteArgs());
       return AdaptivePage<dynamic>(
-          routeData: routeData, child: ChoseLoginOrSignUpPage(key: args.key));
+          routeData: routeData, child: const ChoseLoginOrSignUpPage());
     },
     RootBottomNavigateRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
@@ -92,25 +90,11 @@ class IntroRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [ChoseLoginOrSignUpPage]
-class ChoseLoginOrSignUpRoute
-    extends PageRouteInfo<ChoseLoginOrSignUpRouteArgs> {
-  ChoseLoginOrSignUpRoute({Key? key})
-      : super(ChoseLoginOrSignUpRoute.name,
-            path: '/chose_login_or_sign_up',
-            args: ChoseLoginOrSignUpRouteArgs(key: key));
+class ChoseLoginOrSignUpRoute extends PageRouteInfo<void> {
+  const ChoseLoginOrSignUpRoute()
+      : super(ChoseLoginOrSignUpRoute.name, path: '/chose_login_or_sign_up');
 
   static const String name = 'ChoseLoginOrSignUpRoute';
-}
-
-class ChoseLoginOrSignUpRouteArgs {
-  const ChoseLoginOrSignUpRouteArgs({this.key});
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'ChoseLoginOrSignUpRouteArgs{key: $key}';
-  }
 }
 
 /// generated route for

@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shop_app/core/utils/utils.dart';
 import 'package:shop_app/presentation/widgets/widgets.dart';
 
-import '../../../l10n/l10n_manager.dart';
+import '../../../l10n/l10n.dart';
 import '../../../theme/theme.dart';
 import 'chose_login_or_sign_up_view_model.dart';
 
@@ -22,14 +22,14 @@ class ChoseLoginOrSignUpPage extends HookWidget {
         Hero(
           tag: "shop",
           child: TextView(
-            useL10n().title,
+            L10n.current.title,
             fontColor: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 35.0,
           ),
         ),
         TextView(
-          useL10n().hintChoseLogin,
+          L10n.current.hintChoseLogin,
           fontColor: Colors.white,
           fontWeight: FontWeight.w200,
         ),
@@ -48,13 +48,13 @@ class ChoseLoginOrSignUpPage extends HookWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Button(
-                          useL10n().login.toUpperCase(),
+                          L10n.current.login.toUpperCase(),
                           buttonSize: ButtonSize.infinityWith,
                           onPressed: readVM.playAnimation,
                         ),
                         SizedBox(height: 2.h),
                         Button(
-                          useL10n().signUp.toUpperCase(),
+                          L10n.current.signUp.toUpperCase(),
                           buttonType: ButtonType.primaryLight,
                           buttonSize: ButtonSize.infinityWith,
                           onPressed: readVM.playAnimation,

@@ -20,25 +20,25 @@ part of widgets;
 //     switch (this) {
 //       case TextType.text:
 //         if (!isLength(value, 1, _kStringMaxLength)) {
-//           return useL10n().errorMaxLengthInput;
+//           return L10n.current.errorMaxLengthInput;
 //         }
 //         break;
 //
 //       case TextType.password:
 //         if (!isAlphanumeric(value)) {
-//           return useL10n().errorFormatInputPassword;
+//           return L10n.current.errorFormatInputPassword;
 //         }
 //         if (!isLength(value, 1, _kStringMaxLength)) {
-//           return useL10n().errorMaxLengthInput;
+//           return L10n.current.errorMaxLengthInput;
 //         }
 //         break;
 //
 //       case TextType.email:
 //         if (!isEmail(value)) {
-//           return useL10n().errorFormatInputEmail;
+//           return L10n.current.errorFormatInputEmail;
 //         }
 //         if (!isLength(value, 1, _kStringMaxLength)) {
-//           return useL10n().errorMaxLengthInput;
+//           return L10n.current.errorMaxLengthInput;
 //         }
 //         break;
 //
@@ -471,7 +471,7 @@ part of widgets;
 //
 //     if (isRequired) {
 //       if (value.isEmpty) {
-//         return useL10n().required;
+//         return L10n.current.required;
 //       }
 //     }
 //
