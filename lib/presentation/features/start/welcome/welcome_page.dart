@@ -80,9 +80,9 @@ class _MainBodyPage extends HookWidget {
             context.read(welcomeVMProvider).goToLoginPage,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: kDefaultExThinPadding),
         const _OrSkip(),
-        const SizedBox(height: 8),
+        const SizedBox(height: kDefaultExThinPadding),
         SizedBox(
           width: 70.w,
           child: Button(
