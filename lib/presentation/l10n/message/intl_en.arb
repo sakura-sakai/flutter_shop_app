@@ -1,5 +1,9 @@
 {
   "@@locale": "en",
+  "required": "Required",
+  "errorMaxLengthInput": "Please enter within 255 characters",
+  "errorFormatInputPassword": "Please enter a valid password",
+  "errorFormatInputEmail": "Please enter a valid email",
   "title": "Shop App",
   "home": "Home",
   "brand": "Brand",

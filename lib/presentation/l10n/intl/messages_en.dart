@@ -112,6 +112,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "endSaleIn": MessageLookupByLibrary.simpleMessage("End Sale In :"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "equipment": MessageLookupByLibrary.simpleMessage("Equipment"),
+        "errorFormatInputEmail":
+            MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
+        "errorFormatInputPassword": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid password"),
+        "errorMaxLengthInput": MessageLookupByLibrary.simpleMessage(
+            "Please enter within 255 characters"),
         "exp": MessageLookupByLibrary.simpleMessage("Exp."),
         "fAvailable1": MessageLookupByLibrary.simpleMessage("9 Available"),
         "fAvailable2": MessageLookupByLibrary.simpleMessage("24 Available"),
@@ -247,6 +253,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "recomended": MessageLookupByLibrary.simpleMessage("Recomended"),
         "refine": MessageLookupByLibrary.simpleMessage("Refine"),
         "refineBy": MessageLookupByLibrary.simpleMessage("REFINE BY"),
+        "required": MessageLookupByLibrary.simpleMessage("Required"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),
         "reviews": MessageLookupByLibrary.simpleMessage("8 Reviews"),
         "reviewsAppBar": MessageLookupByLibrary.simpleMessage("Reviews"),
