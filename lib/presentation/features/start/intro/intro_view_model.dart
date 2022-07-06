@@ -60,6 +60,6 @@ class IntroViewModel extends ViewModelBase {
   }
 
   void goToLoginPage() {
-    router.replace(ChoseLoginOrSignUpRoute());
+    router.replace(const WelcomeRoute());
   }
 }

@@ -77,7 +77,7 @@ class TextView extends HookWidget {
 
     return textStyle?.copyWith(
       fontFamily: fontFamily ?? FontFamily.sans,
-      fontSize: fontSize ?? FontSize.large,
+      fontSize: fontSize ?? FontSize.medium,
       fontWeight: fontWeight ?? FontWeight.normal,
       decoration: textDecoration,
       color: (Theme.of(context).brightness == Brightness.light)

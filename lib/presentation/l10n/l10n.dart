@@ -50,6 +50,46 @@ class L10n {
     return Localizations.of<L10n>(context, L10n);
   }
 
+  /// `Required`
+  String get required {
+    return Intl.message(
+      'Required',
+      name: 'required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter within 255 characters`
+  String get errorMaxLengthInput {
+    return Intl.message(
+      'Please enter within 255 characters',
+      name: 'errorMaxLengthInput',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid password`
+  String get errorFormatInputPassword {
+    return Intl.message(
+      'Please enter a valid password',
+      name: 'errorFormatInputPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid email`
+  String get errorFormatInputEmail {
+    return Intl.message(
+      'Please enter a valid email',
+      name: 'errorFormatInputEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Shop App`
   String get title {
     return Intl.message(

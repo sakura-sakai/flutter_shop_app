@@ -172,9 +172,6 @@ class $AssetsImagesGen {
   AssetGenImage get flashSaleIcon =>
       const AssetGenImage('assets/images/flash_sale_icon.png');
 
-  /// File path: assets/images/girl.png
-  AssetGenImage get girl => const AssetGenImage('assets/images/girl.png');
-
   /// File path: assets/images/google.png
   AssetGenImage get google => const AssetGenImage('assets/images/google.png');
 
@@ -264,6 +261,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/search2.png
   AssetGenImage get search2 => const AssetGenImage('assets/images/search2.png');
+
+  /// File path: assets/images/slider_login1.png
+  AssetGenImage get sliderLogin1 =>
+      const AssetGenImage('assets/images/slider_login1.png');
 
   /// File path: assets/images/slider_login2.png
   AssetGenImage get sliderLogin2 =>

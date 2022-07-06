@@ -18,35 +18,49 @@ class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     SplashRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
+      return CupertinoPageX<dynamic>(
           routeData: routeData, child: const SplashPage());
     },
     IntroRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
-          routeData: routeData, child: const IntroPage());
+      return CustomPage<dynamic>(
+          routeData: routeData,
+          child: const IntroPage(),
+          transitionsBuilder: RouteTransitionsBuilders.opacity,
+          durationInMilliseconds: 1000,
+          opaque: true,
+          barrierDismissible: false);
     },
-    ChoseLoginOrSignUpRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
-          routeData: routeData, child: const ChoseLoginOrSignUpPage());
+    WelcomeRoute.name: (routeData) {
+      return CupertinoPageX<dynamic>(
+          routeData: routeData, child: const WelcomePage());
+    },
+    LoginRoute.name: (routeData) {
+      return CustomPage<dynamic>(
+          routeData: routeData,
+          child: const LoginPage(),
+          transitionsBuilder: RouteTransitionsBuilders.opacity,
+          durationInMilliseconds: 1000,
+          opaque: true,
+          barrierDismissible: false);
     },
     RootBottomNavigateRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
+      return CupertinoPageX<dynamic>(
           routeData: routeData, child: const RootBottomNavigatePage());
     },
     HomeRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
+      return CupertinoPageX<dynamic>(
           routeData: routeData, child: const HomePage());
     },
     BrandRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
+      return CupertinoPageX<dynamic>(
           routeData: routeData, child: const BrandPage());
     },
     CartRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
+      return CupertinoPageX<dynamic>(
           routeData: routeData, child: const CartPage());
     },
     ProfileRoute.name: (routeData) {
-      return AdaptivePage<dynamic>(
+      return CupertinoPageX<dynamic>(
           routeData: routeData, child: const ProfilePage());
     }
   };
@@ -55,8 +69,8 @@ class _$AppRouter extends RootStackRouter {
   List<RouteConfig> get routes => [
         RouteConfig(SplashRoute.name, path: '/'),
         RouteConfig(IntroRoute.name, path: '/intro'),
-        RouteConfig(ChoseLoginOrSignUpRoute.name,
-            path: '/chose_login_or_sign_up'),
+        RouteConfig(WelcomeRoute.name, path: '/welcome'),
+        RouteConfig(LoginRoute.name, path: '/login'),
         RouteConfig(RootBottomNavigateRoute.name,
             path: '/root_bottom_navigate',
             children: [
@@ -89,12 +103,19 @@ class IntroRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [ChoseLoginOrSignUpPage]
-class ChoseLoginOrSignUpRoute extends PageRouteInfo<void> {
-  const ChoseLoginOrSignUpRoute()
-      : super(ChoseLoginOrSignUpRoute.name, path: '/chose_login_or_sign_up');
+/// [WelcomePage]
+class WelcomeRoute extends PageRouteInfo<void> {
+  const WelcomeRoute() : super(WelcomeRoute.name, path: '/welcome');
 
-  static const String name = 'ChoseLoginOrSignUpRoute';
+  static const String name = 'WelcomeRoute';
+}
+
+/// generated route for
+/// [LoginPage]
+class LoginRoute extends PageRouteInfo<void> {
+  const LoginRoute() : super(LoginRoute.name, path: '/login');
+
+  static const String name = 'LoginRoute';
 }
 
 /// generated route for
