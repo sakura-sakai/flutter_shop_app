@@ -1,4 +1,4 @@
-library functionals;
+library custom_hook;
 
 import 'dart:async';
 

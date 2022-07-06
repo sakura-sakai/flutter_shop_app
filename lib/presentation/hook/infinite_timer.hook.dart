@@ -1,4 +1,4 @@
-part of functionals;
+part of custom_hook;
 
 int useInfiniteTimer() {
   return use(const _InfiniteTimer());
