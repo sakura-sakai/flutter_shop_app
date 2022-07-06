@@ -64,13 +64,13 @@ class _MainBodyPage extends HookWidget {
           height: 0.5,
           width: 80.0,
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: kDefaultExThinPadding),
         TextView(
           L10n.current.hintChoseLogin,
           fontColor: Colors.white,
           fontWeight: FontWeight.w200,
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: kDefaultPadding),
         SizedBox(
           width: 70.w,
           child: Button(
@@ -201,8 +201,8 @@ class AnimationNextPage extends HookWidget {
     Key? key,
     required this.controller,
   })  : _animation = Tween(
-          begin: 100.0,
-          end: 900.0,
+          begin: 0.0,
+          end: 100.h,
         ).animate(
           CurvedAnimation(parent: controller, curve: Curves.fastOutSlowIn),
         ),
