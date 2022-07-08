@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutApps": MessageLookupByLibrary.simpleMessage("About Apps"),
-        "accesoris": MessageLookupByLibrary.simpleMessage("Accesoris"),
+        "accessories": MessageLookupByLibrary.simpleMessage("Accessories"),
         "account": MessageLookupByLibrary.simpleMessage("Account"),
         "action": MessageLookupByLibrary.simpleMessage("Action"),
         "actionCamera":
@@ -48,7 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cardName": MessageLookupByLibrary.simpleMessage("Card Name"),
         "cardNumber": MessageLookupByLibrary.simpleMessage("Card Number"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
-        "cartArchice":
+        "cartArchive":
             MessageLookupByLibrary.simpleMessage("Items Cart Archive"),
         "cartArchiveText": MessageLookupByLibrary.simpleMessage("Archive"),
         "cartDelete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -74,11 +74,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "cctv": MessageLookupByLibrary.simpleMessage("CCTV"),
         "chatting": MessageLookupByLibrary.simpleMessage("Chatting"),
         "chinese": MessageLookupByLibrary.simpleMessage("Chinese"),
-        "chosePaymnet":
+        "chosePayment":
             MessageLookupByLibrary.simpleMessage("Choose your payment method"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "color": MessageLookupByLibrary.simpleMessage("Color"),
-        "compacCamera":
+        "compactCamera":
             MessageLookupByLibrary.simpleMessage("Compact \n Camera"),
         "computer": MessageLookupByLibrary.simpleMessage("Computer"),
         "credit": MessageLookupByLibrary.simpleMessage("Credit / Debit Card"),
@@ -132,11 +132,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fTitle1": MessageLookupByLibrary.simpleMessage(
             "Apple Macbook Pro 13 with Touch Bar"),
         "fTitle2": MessageLookupByLibrary.simpleMessage(
-            "7 Level Karina Dress Sweet Pesta"),
+            "7 Level Karina Dress Sweet Peseta"),
         "fTitle3": MessageLookupByLibrary.simpleMessage(
             "Samsung Galaxy Note 9 8GB - 512GB"),
         "fTitle4": MessageLookupByLibrary.simpleMessage(
-            "Harry Potter Spesial Edition "),
+            "Harry Potter Special Edition "),
         "fTitle5": MessageLookupByLibrary.simpleMessage(
             "Pro Evolution Soccer 2019 Steam Original PC Games"),
         "fashion": MessageLookupByLibrary.simpleMessage("Fashion"),
@@ -144,17 +144,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "fashionKids": MessageLookupByLibrary.simpleMessage("Fashion Kids"),
         "fashionMan": MessageLookupByLibrary.simpleMessage("Fashion Man"),
         "favorite": MessageLookupByLibrary.simpleMessage("Favorite"),
-        "fendiFashion": MessageLookupByLibrary.simpleMessage("Fendi Fashion"),
+        "fendFashion": MessageLookupByLibrary.simpleMessage("Fend Fashion"),
         "findYouWant": MessageLookupByLibrary.simpleMessage("Find you want"),
         "flash": MessageLookupByLibrary.simpleMessage("Flash"),
         "flashSale": MessageLookupByLibrary.simpleMessage("Flash Sale"),
         "food": MessageLookupByLibrary.simpleMessage("Food"),
-        "gamming": MessageLookupByLibrary.simpleMessage("Gamming"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot password"),
+        "gaming": MessageLookupByLibrary.simpleMessage("Gaming"),
         "goPayment": MessageLookupByLibrary.simpleMessage("Go to payment"),
         "googleWallet": MessageLookupByLibrary.simpleMessage("Google Wallet"),
         "gucciFashion": MessageLookupByLibrary.simpleMessage("Gucci Fashion"),
-        "handphone": MessageLookupByLibrary.simpleMessage("Handphone"),
-        "handyCam": MessageLookupByLibrary.simpleMessage("Handycam"),
+        "handyCam": MessageLookupByLibrary.simpleMessage("Handicap"),
+        "haveAcc":
+            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "headphone": MessageLookupByLibrary.simpleMessage("Headphone"),
         "health": MessageLookupByLibrary.simpleMessage("Health"),
         "healthCare": MessageLookupByLibrary.simpleMessage("Health Care"),
         "hindi": MessageLookupByLibrary.simpleMessage("Hindi"),
@@ -170,15 +174,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeWork":
             MessageLookupByLibrary.simpleMessage("Home, Work & Other Address"),
         "houseNo": MessageLookupByLibrary.simpleMessage(
-            "House No: 1234, 2nd Floor Sector 18, \nSilicon Valey Amerika Serikat"),
+            "House No: 1234, 2nd Floor Sector 18, \nSilicon Valley America Serkan"),
         "indonesia": MessageLookupByLibrary.simpleMessage("Indonesia"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Item Added"),
         "itemDiscount": MessageLookupByLibrary.simpleMessage("Item Discount"),
         "itemPayment1":
-            MessageLookupByLibrary.simpleMessage("Buy Dress Red Valvet"),
+            MessageLookupByLibrary.simpleMessage("Buy Dress Red Valet"),
         "itemPayment2": MessageLookupByLibrary.simpleMessage("Buy Iphone X"),
         "itemPayment3": MessageLookupByLibrary.simpleMessage("Buy Macbook Pro"),
-        "itemPayment4": MessageLookupByLibrary.simpleMessage("Buy Handphone"),
+        "itemPayment4": MessageLookupByLibrary.simpleMessage("Buy Headphone"),
         "itemPayment5": MessageLookupByLibrary.simpleMessage("Buy Dress Blue"),
         "itemPopular": MessageLookupByLibrary.simpleMessage("Item Popular"),
         "l": MessageLookupByLibrary.simpleMessage("L"),
@@ -186,10 +190,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "languageSetting": MessageLookupByLibrary.simpleMessage("Language"),
         "locality": MessageLookupByLibrary.simpleMessage("Locality"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
-        "loginFacebook":
-            MessageLookupByLibrary.simpleMessage("Login With Facebook"),
-        "loginGoogle":
-            MessageLookupByLibrary.simpleMessage("Login With Google"),
+        "loginWith": MessageLookupByLibrary.simpleMessage("Or connect with"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "longLorem": MessageLookupByLibrary.simpleMessage(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."),
@@ -208,10 +209,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "news": MessageLookupByLibrary.simpleMessage("New"),
         "nikeSport": MessageLookupByLibrary.simpleMessage("Nike Sport"),
         "noMessage": MessageLookupByLibrary.simpleMessage("Not Message Yet"),
-        "notHave":
-            MessageLookupByLibrary.simpleMessage("Not Have Account? Sign Up"),
-        "notHaveLogin":
-            MessageLookupByLibrary.simpleMessage("Have Account? Sign In"),
+        "notHaveAcc":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "notHaveMessage":
             MessageLookupByLibrary.simpleMessage("Not Have Message"),
         "notHaveNotification":
@@ -227,7 +226,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Order ID: 5t36 - 9iu2 - 12i92"),
         "orderNotification":
             MessageLookupByLibrary.simpleMessage("Order Notifications"),
-        "otomotif": MessageLookupByLibrary.simpleMessage("Otomotif"),
+        "otoMotif": MessageLookupByLibrary.simpleMessage("OtoMotif"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
@@ -236,21 +235,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "payments": MessageLookupByLibrary.simpleMessage("Payments"),
         "paypal": MessageLookupByLibrary.simpleMessage("Paypal"),
         "pinCode": MessageLookupByLibrary.simpleMessage("Pin Code"),
+        "pleaseCreateAcc": MessageLookupByLibrary.simpleMessage(
+            "Please fill the details and create account"),
+        "pleaseLogin": MessageLookupByLibrary.simpleMessage(
+            "Please login to continue using our app"),
         "popularity": MessageLookupByLibrary.simpleMessage("Popularity"),
-        "priceHight": MessageLookupByLibrary.simpleMessage("Price: High-Low"),
-        "priceLow": MessageLookupByLibrary.simpleMessage("Price: Low-Hight"),
+        "priceHeight": MessageLookupByLibrary.simpleMessage("Price: High-Low"),
+        "priceLow": MessageLookupByLibrary.simpleMessage("Price: Low-Height"),
         "productDetail": MessageLookupByLibrary.simpleMessage("Product Detail"),
         "productSale1": MessageLookupByLibrary.simpleMessage("923 Sale"),
         "productSale2": MessageLookupByLibrary.simpleMessage("892 Sale"),
         "productSale3": MessageLookupByLibrary.simpleMessage("210 Sale"),
-        "productTitle1": MessageLookupByLibrary.simpleMessage("Firrona Skirt!"),
-        "productTitle2": MessageLookupByLibrary.simpleMessage("Arpenaz 4"),
+        "productTitle1": MessageLookupByLibrary.simpleMessage("Fiona Skirt!"),
+        "productTitle2": MessageLookupByLibrary.simpleMessage("Arena 4"),
         "productTitle3": MessageLookupByLibrary.simpleMessage("Polo T Shirt"),
         "ratingReview": MessageLookupByLibrary.simpleMessage(
             "Item delivered in good condition. I will recommend to other buyer."),
         "ratingReview2": MessageLookupByLibrary.simpleMessage(
             "Very Recommended item i love it very love it"),
-        "recomended": MessageLookupByLibrary.simpleMessage("Recomended"),
+        "recommended": MessageLookupByLibrary.simpleMessage("Recommended"),
         "refine": MessageLookupByLibrary.simpleMessage("Refine"),
         "refineBy": MessageLookupByLibrary.simpleMessage("REFINE BY"),
         "required": MessageLookupByLibrary.simpleMessage("Required"),
@@ -282,8 +285,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "sonyTech": MessageLookupByLibrary.simpleMessage("Sony Tech"),
         "sort": MessageLookupByLibrary.simpleMessage("Sort"),
         "sortBy": MessageLookupByLibrary.simpleMessage("SORT BY"),
-        "spesifications":
-            MessageLookupByLibrary.simpleMessage("Spesifications :"),
+        "specifications":
+            MessageLookupByLibrary.simpleMessage("Specifications :"),
         "sport": MessageLookupByLibrary.simpleMessage("Sport"),
         "spyCam": MessageLookupByLibrary.simpleMessage("Spy Cam"),
         "state": MessageLookupByLibrary.simpleMessage("State"),

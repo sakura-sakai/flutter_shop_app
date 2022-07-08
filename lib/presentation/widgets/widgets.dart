@@ -27,6 +27,8 @@ part 'stless/circle_paint.dart';
 
 part 'stless/indicator.dart';
 
+part 'stless/scroll_with_fixed_bottom.dart';
+
 part 'stless/text_area/obscure_text_area.dart';
 
 part 'stless/text_area/text_area.dart';

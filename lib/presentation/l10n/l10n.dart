@@ -100,6 +100,26 @@ class L10n {
     );
   }
 
+  /// `Please login to continue using our app`
+  String get pleaseLogin {
+    return Intl.message(
+      'Please login to continue using our app',
+      name: 'pleaseLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please fill the details and create account`
+  String get pleaseCreateAcc {
+    return Intl.message(
+      'Please fill the details and create account',
+      name: 'pleaseCreateAcc',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get home {
     return Intl.message(
@@ -170,21 +190,21 @@ class L10n {
     );
   }
 
-  /// `Handphone`
-  String get handphone {
+  /// `Headphone`
+  String get headphone {
     return Intl.message(
-      'Handphone',
-      name: 'handphone',
+      'Headphone',
+      name: 'headphone',
       desc: '',
       args: [],
     );
   }
 
-  /// `Gamming`
-  String get gamming {
+  /// `Gaming`
+  String get gaming {
     return Intl.message(
-      'Gamming',
-      name: 'gamming',
+      'Gaming',
+      name: 'gaming',
       desc: '',
       args: [],
     );
@@ -230,11 +250,11 @@ class L10n {
     );
   }
 
-  /// `Otomotif`
-  String get otomotif {
+  /// `OtoMotif`
+  String get otoMotif {
     return Intl.message(
-      'Otomotif',
-      name: 'otomotif',
+      'OtoMotif',
+      name: 'otoMotif',
       desc: '',
       args: [],
     );
@@ -380,11 +400,11 @@ class L10n {
     );
   }
 
-  /// `Recomended`
-  String get recomended {
+  /// `Recommended`
+  String get recommended {
     return Intl.message(
-      'Recomended',
-      name: 'recomended',
+      'Recommended',
+      name: 'recommended',
       desc: '',
       args: [],
     );
@@ -420,10 +440,10 @@ class L10n {
     );
   }
 
-  /// `7 Level Karina Dress Sweet Pesta`
+  /// `7 Level Karina Dress Sweet Peseta`
   String get fTitle2 {
     return Intl.message(
-      '7 Level Karina Dress Sweet Pesta',
+      '7 Level Karina Dress Sweet Peseta',
       name: 'fTitle2',
       desc: '',
       args: [],
@@ -480,10 +500,10 @@ class L10n {
     );
   }
 
-  /// `Harry Potter Spesial Edition `
+  /// `Harry Potter Special Edition `
   String get fTitle4 {
     return Intl.message(
-      'Harry Potter Spesial Edition ',
+      'Harry Potter Special Edition ',
       name: 'fTitle4',
       desc: '',
       args: [],
@@ -570,11 +590,11 @@ class L10n {
     );
   }
 
-  /// `Fendi Fashion`
-  String get fendiFashion {
+  /// `Fend Fashion`
+  String get fendFashion {
     return Intl.message(
-      'Fendi Fashion',
-      name: 'fendiFashion',
+      'Fend Fashion',
+      name: 'fendFashion',
       desc: '',
       args: [],
     );
@@ -631,10 +651,10 @@ class L10n {
   }
 
   /// `Items Cart Archive`
-  String get cartArchice {
+  String get cartArchive {
     return Intl.message(
       'Items Cart Archive',
-      name: 'cartArchice',
+      name: 'cartArchive',
       desc: '',
       args: [],
     );
@@ -910,10 +930,10 @@ class L10n {
     );
   }
 
-  /// `Order from ShopApp`
+  /// `Order from Shop App`
   String get txtInfo1 {
     return Intl.message(
-      'Order from ShopApp',
+      'Order from Shop App',
       name: 'txtInfo1',
       desc: '',
       args: [],
@@ -1000,10 +1020,10 @@ class L10n {
     );
   }
 
-  /// `House No: 1234, 2nd Floor Sector 18, \nSilicon Valey Amerika Serikat`
+  /// `House No: 1234, 2nd Floor Sector 18, \nSilicon Valley America Serkan`
   String get houseNo {
     return Intl.message(
-      'House No: 1234, 2nd Floor Sector 18, \nSilicon Valey Amerika Serikat',
+      'House No: 1234, 2nd Floor Sector 18, \nSilicon Valley America Serkan',
       name: 'houseNo',
       desc: '',
       args: [],
@@ -1130,10 +1150,10 @@ class L10n {
     );
   }
 
-  /// `Price: Low-Hight`
+  /// `Price: Low-Height`
   String get priceLow {
     return Intl.message(
-      'Price: Low-Hight',
+      'Price: Low-Height',
       name: 'priceLow',
       desc: '',
       args: [],
@@ -1141,10 +1161,10 @@ class L10n {
   }
 
   /// `Price: High-Low`
-  String get priceHight {
+  String get priceHeight {
     return Intl.message(
       'Price: High-Low',
-      name: 'priceHight',
+      name: 'priceHeight',
       desc: '',
       args: [],
     );
@@ -1311,10 +1331,10 @@ class L10n {
   }
 
   /// `Choose your payment method`
-  String get chosePaymnet {
+  String get chosePayment {
     return Intl.message(
       'Choose your payment method',
-      name: 'chosePaymnet',
+      name: 'chosePayment',
       desc: '',
       args: [],
     );
@@ -1560,11 +1580,11 @@ class L10n {
     );
   }
 
-  /// `Spesifications :`
-  String get spesifications {
+  /// `Specifications :`
+  String get specifications {
     return Intl.message(
-      'Spesifications :',
-      name: 'spesifications',
+      'Specifications :',
+      name: 'specifications',
       desc: '',
       args: [],
     );
@@ -1600,10 +1620,10 @@ class L10n {
     );
   }
 
-  /// `Firrona Skirt!`
+  /// `Fiona Skirt!`
   String get productTitle1 {
     return Intl.message(
-      'Firrona Skirt!',
+      'Fiona Skirt!',
       name: 'productTitle1',
       desc: '',
       args: [],
@@ -1620,10 +1640,10 @@ class L10n {
     );
   }
 
-  /// `Arpenaz 4`
+  /// `Arena 4`
   String get productTitle2 {
     return Intl.message(
-      'Arpenaz 4',
+      'Arena 4',
       name: 'productTitle2',
       desc: '',
       args: [],
@@ -1861,10 +1881,10 @@ class L10n {
   }
 
   /// `Compact \n Camera`
-  String get compacCamera {
+  String get compactCamera {
     return Intl.message(
       'Compact \n Camera',
-      name: 'compacCamera',
+      name: 'compactCamera',
       desc: '',
       args: [],
     );
@@ -1910,10 +1930,10 @@ class L10n {
     );
   }
 
-  /// `Handycam`
+  /// `Handicap`
   String get handyCam {
     return Intl.message(
-      'Handycam',
+      'Handicap',
       name: 'handyCam',
       desc: '',
       args: [],
@@ -1950,11 +1970,11 @@ class L10n {
     );
   }
 
-  /// `Accesoris`
-  String get accesoris {
+  /// `Accessories`
+  String get accessories {
     return Intl.message(
-      'Accesoris',
-      name: 'accesoris',
+      'Accessories',
+      name: 'accessories',
       desc: '',
       args: [],
     );
@@ -2160,41 +2180,41 @@ class L10n {
     );
   }
 
-  /// `Not Have Account? Sign Up`
-  String get notHave {
+  /// `Forgot password`
+  String get forgotPassword {
     return Intl.message(
-      'Not Have Account? Sign Up',
-      name: 'notHave',
+      'Forgot password',
+      name: 'forgotPassword',
       desc: '',
       args: [],
     );
   }
 
-  /// `Login With Facebook`
-  String get loginFacebook {
+  /// `Don't have an account?`
+  String get notHaveAcc {
     return Intl.message(
-      'Login With Facebook',
-      name: 'loginFacebook',
+      'Don\'t have an account?',
+      name: 'notHaveAcc',
       desc: '',
       args: [],
     );
   }
 
-  /// `Login With Google`
-  String get loginGoogle {
+  /// `Already have an account?`
+  String get haveAcc {
     return Intl.message(
-      'Login With Google',
-      name: 'loginGoogle',
+      'Already have an account?',
+      name: 'haveAcc',
       desc: '',
       args: [],
     );
   }
 
-  /// `Have Account? Sign In`
-  String get notHaveLogin {
+  /// `Or connect with`
+  String get loginWith {
     return Intl.message(
-      'Have Account? Sign In',
-      name: 'notHaveLogin',
+      'Or connect with',
+      name: 'loginWith',
       desc: '',
       args: [],
     );
@@ -2370,10 +2390,10 @@ class L10n {
     );
   }
 
-  /// `Buy Dress Red Valvet`
+  /// `Buy Dress Red Valet`
   String get itemPayment1 {
     return Intl.message(
-      'Buy Dress Red Valvet',
+      'Buy Dress Red Valet',
       name: 'itemPayment1',
       desc: '',
       args: [],
@@ -2430,10 +2450,10 @@ class L10n {
     );
   }
 
-  /// `Buy Handphone`
+  /// `Buy Headphone`
   String get itemPayment4 {
     return Intl.message(
-      'Buy Handphone',
+      'Buy Headphone',
       name: 'itemPayment4',
       desc: '',
       args: [],

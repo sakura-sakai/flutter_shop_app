@@ -38,6 +38,10 @@ class $AssetsIconsGen {
   AssetGenImage get creditAcount =>
       const AssetGenImage('assets/icons/credit_acount.png');
 
+  /// File path: assets/icons/facebook.png
+  AssetGenImage get facebook =>
+      const AssetGenImage('assets/icons/facebook.png');
+
   /// File path: assets/icons/fashion.png
   AssetGenImage get fashion => const AssetGenImage('assets/icons/fashion.png');
 
@@ -54,6 +58,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/girl_call_center.png
   AssetGenImage get girlCallCenter =>
       const AssetGenImage('assets/icons/girl_call_center.png');
+
+  /// File path: assets/icons/google.png
+  AssetGenImage get google => const AssetGenImage('assets/icons/google.png');
 
   /// File path: assets/icons/hand_phone.png
   AssetGenImage get handPhone =>
@@ -98,6 +105,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/truck.png
   AssetGenImage get truck => const AssetGenImage('assets/icons/truck.png');
+
+  /// File path: assets/icons/twitter.png
+  AssetGenImage get twitter => const AssetGenImage('assets/icons/twitter.png');
 }
 
 class $AssetsImagesGen {
