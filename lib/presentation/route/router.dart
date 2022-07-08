@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../features/auth/login/login_page.dart';
+import '../features/auth/sign_up/sign_up_page.dart';
 import '../features/brand/brand_page.dart';
 import '../features/cart/cart_page.dart';
 import '../features/home/home_page.dart';
@@ -42,7 +43,13 @@ final routerProvider = Provider<AppRouter>((_) => AppRouter());
       path: '/login',
       page: LoginPage,
       transitionsBuilder: RouteTransitionsBuilders.opacity,
-      durationInMilliseconds: 1000,
+      durationInMilliseconds: 500,
+    ),
+    CustomRoute(
+      path: '/sign_up',
+      page: SignUpPage,
+      transitionsBuilder: RouteTransitionsBuilders.opacity,
+      durationInMilliseconds: 500,
     ),
     AutoRoute(
       path: '/root_bottom_navigate',

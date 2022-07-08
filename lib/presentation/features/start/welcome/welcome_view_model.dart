@@ -33,7 +33,7 @@ class WelcomeViewModel extends ViewModelBase {
 
   Future<void> goToSignup() async {
     await _playAnimation();
-    router.replace(const LoginRoute());
+    router.replace(const SignUpRoute());
   }
 
   Future<void> _playAnimation() async {

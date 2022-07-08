@@ -90,6 +90,26 @@ class L10n {
     );
   }
 
+  /// `Please check internet connection`
+  String get noInternet {
+    return Intl.message(
+      'Please check internet connection',
+      name: 'noInternet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One of the input items is incorrect. Please check the input details and enter again.`
+  String get loginInformationError {
+    return Intl.message(
+      'One of the input items is incorrect. Please check the input details and enter again.',
+      name: 'loginInformationError',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Shop App`
   String get title {
     return Intl.message(
@@ -720,11 +740,11 @@ class L10n {
     );
   }
 
-  /// `Alisa Hearth`
-  String get name {
+  /// `Full name`
+  String get fullName {
     return Intl.message(
-      'Alisa Hearth',
-      name: 'name',
+      'Full name',
+      name: 'fullName',
       desc: '',
       args: [],
     );

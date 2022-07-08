@@ -1,246 +1,100 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_hooks/flutter_hooks.dart';
-//
-// import 'package:flutter_svg/svg.dart';
-// import 'package:hooks_riverpod/hooks_riverpod.dart';
-// import 'package:shop_app/core/utils/utils.dart';
-//
-// import '../../../../core/const/constants.dart';
-// import '../../../l10n/l10n_manager.dart';
-// import '../../../route/router.dart';
-// import '../../../theme/theme.dart';
-// import '../../../widgets/elements/assets_gen/assets.gen.dart';
-// import '../../../widgets/elements/assets_gen/fonts.gen.dart';
-// import '../../../widgets/elements/button/button.dart';
-// import '../../../widgets/elements/text_area/obscure_text_area.dart';
-// import '../../../widgets/elements/text_area/text_area.dart';
-// import '../../../widgets/elements/text_view.dart';
-// import '../widgets/already_have_an_account_acheck.dart';
-//
-// class SignUpPage extends HookConsumerWidget {
-//   const SignUpPage({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context, WidgetRef ref) {
-//     return Scaffold(
-//       body: _Background(
-//         child: SingleChildScrollView(
-//           physics: const BouncingScrollPhysics(),
-//           child: Column(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: <Widget>[
-//               SafeArea(child: SizedBox(height: 3.h)),
-//               TextView(
-//                 L10n.current.signUp.toUpperCase(),
-//                 fontSize: FontSize.massive,
-//                 fontFamily: FontFamily.rotunda,
-//                 fontWeight: FontWeight.bold,
-//               ),
-//               SizedBox(height: 3.h),
-//               Assets.svgs.signup.svg(
-//                 width: 70.w,
-//               ),
-//               SizedBox(height: 3.h),
-//               SizedBox(
-//                 width: 70.w,
-//                 child: Column(
-//                   children: [
-//                     TextArea(
-//                       onSaved: (value) {},
-//                       hintText: L10n.current.email,
-//                       labelText: L10n.current.email,
-//                       isRequired: true,
-//                       textLightColor: AppColors.violet,
-//                       textType: TextType.email,
-//                       floatingLabelBehavior: FloatingLabelBehavior.never,
-//                       borderRadius: 26,
-//                       filled: true,
-//                       fillColor: AppColors.violet[50],
-//                       textInputAction: TextInputAction.next,
-//                       prefixIcon: const Padding(
-//                         padding: EdgeInsets.symmetric(
-//                           horizontal: kDefaultPadding,
-//                         ),
-//                         child: Icon(
-//                           Icons.person,
-//                           color: AppColors.violet,
-//                           size: kWideIconSize,
-//                         ),
-//                       ),
-//                     ),
-//                     SizedBox(height: 1.h),
-//                     ObscureTextArea(
-//                       onSaved: (value) {},
-//                       hintText: L10n.current.password,
-//                       labelText: L10n.current.password,
-//                       isRequired: true,
-//                       textLightColor: AppColors.violet,
-//                       textType: TextType.password,
-//                       floatingLabelBehavior: FloatingLabelBehavior.never,
-//                       borderRadius: 26,
-//                       filled: true,
-//                       fillColor: AppColors.violet[50],
-//                       textInputAction: TextInputAction.done,
-//                       prefixIcon: const Padding(
-//                         padding: EdgeInsets.symmetric(
-//                           horizontal: kDefaultPadding,
-//                         ),
-//                         child: Icon(
-//                           Icons.lock,
-//                           color: AppColors.violet,
-//                           size: kWideIconSize,
-//                         ),
-//                       ),
-//                     ),
-//                     SizedBox(height: 3.h),
-//                     LoadingButton(
-//                       L10n.current.signUp.toUpperCase(),
-//                       buttonType: ButtonType.primaryLight,
-//                       buttonSize: ButtonSize.infinityWith,
-//                       onPressed: () async {
-//                         await Future.delayed(const Duration(seconds: 3));
-//                         AppRouter().replaceAll(const [HomeRoute()]);
-//                       },
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               SizedBox(height: 3.h),
-//               AlreadyHaveAnAccountCheck(
-//                 isLogin: false,
-//                 onTap: () {
-//                   AppRouter().replace(const LoginRoute());
-//                 },
-//               ),
-//               _OrDivider(),
-//               Row(
-//                 mainAxisAlignment: MainAxisAlignment.center,
-//                 children: <Widget>[
-//                   _SocialIcon(
-//                     iconSrc: Assets.svgs.facebook.path,
-//                     onTap: () {},
-//                   ),
-//                   _SocialIcon(
-//                     iconSrc: Assets.svgs.twitter.path,
-//                     onTap: () {},
-//                   ),
-//                   _SocialIcon(
-//                     iconSrc: Assets.svgs.googlePlus.path,
-//                     onTap: () {},
-//                   ),
-//                 ],
-//               ),
-//               SizedBox(height: 3.h)
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-//
-// class _Background extends HookWidget {
-//   final Widget child;
-//
-//   const _Background({
-//     Key? key,
-//     required this.child,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       height: 100.h,
-//       width: double.infinity,
-//       child: Stack(
-//         alignment: Alignment.center,
-//         children: <Widget>[
-//           Positioned(
-//             top: 0,
-//             left: 0,
-//             child: Assets.images.signupTop.image(
-//               width: 16.h,
-//             ),
-//           ),
-//           Positioned(
-//             bottom: 0,
-//             left: 0,
-//             child: Assets.images.mainBottom.image(
-//               width: 8.h,
-//             ),
-//           ),
-//           child,
-//         ],
-//       ),
-//     );
-//   }
-// }
-//
-// class _OrDivider extends HookWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       margin: EdgeInsets.symmetric(vertical: 2.h),
-//       width: 80.w,
-//       child: Row(
-//         children: <Widget>[
-//           _buildDivider(),
-//           Padding(
-//             padding: const EdgeInsets.symmetric(
-//               horizontal: kDefaultExThinPadding,
-//             ),
-//             child: TextView(
-//               L10n.current.or,
-//               fontWeight: FontWeight.w600,
-//               fontColor: AppColors.violet,
-//             ),
-//           ),
-//           _buildDivider(),
-//         ],
-//       ),
-//     );
-//   }
-//
-//   Expanded _buildDivider() {
-//     return Expanded(
-//       child: Divider(
-//         color: AppColors.violet[300]!,
-//         height: 1.5,
-//       ),
-//     );
-//   }
-// }
-//
-// class _SocialIcon extends HookWidget {
-//   const _SocialIcon({
-//     Key? key,
-//     required this.iconSrc,
-//     this.onTap,
-//   }) : super(key: key);
-//
-//   final String iconSrc;
-//   final GestureTapCallback? onTap;
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return GestureDetector(
-//       onTap: onTap,
-//       child: Container(
-//         margin: const EdgeInsets.symmetric(horizontal: kDefaultExThinPadding),
-//         padding: const EdgeInsets.all(kDefaultPadding),
-//         decoration: BoxDecoration(
-//           border: Border.all(
-//             width: 2,
-//             color: AppColors.violet[100]!,
-//           ),
-//           shape: BoxShape.circle,
-//         ),
-//         child: SvgPicture.asset(
-//           iconSrc,
-//           height: kFatIconSize,
-//           width: kFatIconSize,
-//         ),
-//       ),
-//     );
-//   }
-// }
+import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:shop_app/core/const/constants.dart';
+import 'package:shop_app/core/utils/utils.dart';
+import 'package:shop_app/presentation/l10n/l10n.dart';
+
+import '../../../route/router.dart';
+import '../../../widgets/widgets.dart';
+import '../auth_view_model.dart';
+import '../stless/auth_background.dart';
+import '../stless/auth_error_message.dart';
+import '../stless/auth_have_account_check.dart';
+import '../stless/auth_header.dart';
+import '../stless/auth_input_field.dart';
+import '../stless/auth_password_input.dart';
+
+class SignUpPage extends HookWidget {
+  const SignUpPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AuthBackgroundPage(
+      child: ScrollWithFixedBottom(
+        scrollChild: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            AuthHeader(content: L10n.current.pleaseCreateAcc),
+            const _FormInput(),
+            const SizedBox.shrink(),
+          ],
+        ),
+        fixedBottom: LoadingButton(
+          L10n.current.signUp,
+          buttonSize: ButtonSize.infinityWith,
+          onPressed: () async {
+            await context.read(authVMProvider).signUp();
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class _FormInput extends HookWidget {
+  const _FormInput({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: context.read(authVMProvider).formSignupKey,
+      child: Column(
+        children: [
+          Hero(
+            tag: 'add_form',
+            child: Material(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.circular(15),
+              child: AuthInputField(
+                icon: Icons.account_circle,
+                label: L10n.current.fullName,
+                onSaved: (value) {},
+              ),
+            ),
+          ),
+          const SizedBox(height: kDefaultPadding),
+          HookConsumer(
+            builder: (_, ref, child) {
+              final errorMessage = ref.watch(
+                authVMProvider.select((vm) => vm.errorMessage),
+              );
+
+              if (errorMessage.isEmpty) return const SizedBox.shrink();
+
+              return AuthErrorMessage(errorMessage);
+            },
+          ),
+          AuthInputField(
+            icon: Icons.email,
+            label: L10n.current.email,
+            onSaved: (value) {},
+          ),
+          const SizedBox(height: kDefaultPadding),
+          AuthPasswordInput(
+            onSaved: (value) {},
+          ),
+          const SizedBox(height: kDefaultPadding),
+          AuthHaveAccountCheck(
+            text: L10n.current.haveAcc,
+            highLightText: L10n.current.login,
+            onTapHighLight: () => AppRouter().replace(const LoginRoute()),
+          ),
+          const SizedBox(height: kDefaultWidePadding),
+        ],
+      ),
+    );
+  }
+}

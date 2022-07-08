@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 import '../../../../core/const/constants.dart';
+import '../../../widgets/widgets.dart';
 
-class BackgroundAuthPage extends HookWidget {
-  const BackgroundAuthPage({
+class AuthBackgroundPage extends HookWidget {
+  const AuthBackgroundPage({
     Key? key,
-    required this.imgBackground,
     required this.child,
   }) : super(key: key);
 
-  final String imgBackground;
   final Widget child;
 
   @override
@@ -21,7 +20,7 @@ class BackgroundAuthPage extends HookWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(imgBackground),
+            image: AssetImage(Assets.images.loginScreenBackground.path),
             fit: BoxFit.cover,
           ),
         ),

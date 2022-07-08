@@ -151,6 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "food": MessageLookupByLibrary.simpleMessage("Food"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password"),
+        "fullName": MessageLookupByLibrary.simpleMessage("Full name"),
         "gaming": MessageLookupByLibrary.simpleMessage("Gaming"),
         "goPayment": MessageLookupByLibrary.simpleMessage("Go to payment"),
         "googleWallet": MessageLookupByLibrary.simpleMessage("Google Wallet"),
@@ -190,6 +191,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "languageSetting": MessageLookupByLibrary.simpleMessage("Language"),
         "locality": MessageLookupByLibrary.simpleMessage("Locality"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginInformationError": MessageLookupByLibrary.simpleMessage(
+            "One of the input items is incorrect. Please check the input details and enter again."),
         "loginWith": MessageLookupByLibrary.simpleMessage("Or connect with"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "longLorem": MessageLookupByLibrary.simpleMessage(
@@ -203,11 +206,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "message": MessageLookupByLibrary.simpleMessage("Message"),
         "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "myPersonal": MessageLookupByLibrary.simpleMessage("My Personal Card"),
-        "name": MessageLookupByLibrary.simpleMessage("Alisa Hearth"),
         "nameCC": MessageLookupByLibrary.simpleMessage("Alissa Hearth"),
         "newItem": MessageLookupByLibrary.simpleMessage("New Item"),
         "news": MessageLookupByLibrary.simpleMessage("New"),
         "nikeSport": MessageLookupByLibrary.simpleMessage("Nike Sport"),
+        "noInternet": MessageLookupByLibrary.simpleMessage(
+            "Please check internet connection"),
         "noMessage": MessageLookupByLibrary.simpleMessage("Not Message Yet"),
         "notHaveAcc":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),

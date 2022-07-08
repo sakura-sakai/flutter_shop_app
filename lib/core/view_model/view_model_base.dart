@@ -5,12 +5,13 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:shop_app/core/services/other/network.dart';
 import 'package:shop_app/presentation/route/router.dart';
 import 'package:shop_app/presentation/widgets/widgets.dart';
 
 import '../services/exceptions/exceptions.dart';
 
-abstract class ViewModelBase extends ChangeNotifier {
+abstract class ViewModelBase extends ChangeNotifier with Network {
   ViewModelBase(Reader read, {List<Object?>? keys}) {
     _read = read;
     useEffect(

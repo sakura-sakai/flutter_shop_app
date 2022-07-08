@@ -1,8 +1,9 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../core/services/exceptions/exceptions.dart';
+import '../../domain/entities/auth_Signup_request.dart';
 import '../../domain/entities/authentication_user.dart';
-import '../../domain/entities/login_request_auth.dart';
+import '../../domain/entities/auth_login_request.dart';
 import '../../domain/entities/refresh_token.dart';
 import '../../domain/repositories/auth/auth_repository.dart';
 import '../sources/api/auth_api.dart';
@@ -15,12 +16,37 @@ class AuthRepositoryImpl implements AuthRepository {
   final AuthApi _authApi = AuthApi();
 
   @override
+  Future<AuthenticationUser> signUp({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final authRequest = AuthSignupRequest(name, email, password);
+
+      final authCreated = await _authApi.signUp(authRequest);
+
+      return AuthenticationUser(
+        id: authCreated.id,
+        email: authCreated.email,
+        displayName: authCreated.displayName,
+        avatarImageUrl: authCreated.avatarImageUrl,
+        avatarImageThumbUrl: authCreated.avatarImageThumbUrl,
+        token: authCreated.token,
+        refreshToken: authCreated.refreshToken,
+      );
+    } catch (e) {
+      throw AppException.handler(e);
+    }
+  }
+
+  @override
   Future<AuthenticationUser> login({
     required String email,
     required String password,
   }) async {
     try {
-      final authRequest = LoginRequestAuth(email, password);
+      final authRequest = AuthLoginRequest(email, password);
 
       final authCreated = await _authApi.login(authRequest);
 

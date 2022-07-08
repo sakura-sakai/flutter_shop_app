@@ -8,6 +8,29 @@ class AuthUseCase extends UseCase {
   AuthUseCase(Reader read) : super(read);
 
   ///
+  /// SignUp
+  ///
+  Future<void> signUp({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    try {
+      await authSecureRepo.deleteSecurityToken();
+
+      final authenticationUser = await authRepo.signUp(
+        name: name,
+        email: email,
+        password: password,
+      );
+
+      _saveToken(authenticationUser);
+    } catch (e) {
+      throw AppException.handler(e);
+    }
+  }
+
+  ///
   /// Login
   ///
   Future<void> login({
