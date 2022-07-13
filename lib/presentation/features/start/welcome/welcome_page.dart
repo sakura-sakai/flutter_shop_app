@@ -43,7 +43,7 @@ class WelcomePage extends HookWidget {
 
             return !isPlayAnimation
                 ? const _MainBodyPage()
-                : AnimationNextPage(controller: animationCtrl);
+                : _AnimationNextPage(controller: animationCtrl);
           },
         ),
       ],
@@ -196,8 +196,8 @@ class _StackBackgroundPage extends HookWidget {
   }
 }
 
-class AnimationNextPage extends HookWidget {
-  AnimationNextPage({
+class _AnimationNextPage extends HookWidget {
+  _AnimationNextPage({
     Key? key,
     required this.controller,
   })  : _animation = Tween(
